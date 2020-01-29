@@ -6,7 +6,7 @@ import numpy as np
 import pykitti as pk
 
 def loadData():
-    basedir = 'C:\\Users\\Kjetk\\PycharmProjects\\velocityEstimationStereo'
+    basedir = '.'
     date = '2011_09_26'
     drive = '0096'
 

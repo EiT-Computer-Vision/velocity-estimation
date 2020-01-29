@@ -1,21 +1,20 @@
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
-imgL = cv2.imread('C:\\Users\\Kjetk\PycharmProjects\\velocityEstimationStereo\\2011_09_26\\2011_09_26_drive_0096_sync\\image_02\\data\\0000000051.png',0)
-imgR = cv2.imread('C:\\Users\\Kjetk\PycharmProjects\\velocityEstimationStereo\\2011_09_26\\2011_09_26_drive_0096_sync\\image_03\\data\\0000000051.png',0)
+imgL = cv2.imread('.\\2011_09_26\\2011_09_26_drive_0096_sync\\image_02\\data\\0000000051.png',0)
+imgR = cv2.imread('.\\2011_09_26\\2011_09_26_drive_0096_sync\\image_03\\data\\0000000051.png',0)
 from imageManipulation import loadData
 
 #baseline = 54 cm?
 #focal length = ?
 
 def loadCamToCam(data):
-    camToCam = data._load_calib_cam_to_cam('C:\\Users\\Kjetk\\PycharmProjects\\velocityEstimationStereo\\2011_09_26\\calib_velo_to_cam.txt',\
-    'C:\\Users\\Kjetk\PycharmProjects\\velocityEstimationStereo\\2011_09_26\\calib_cam_to_cam.txt')
+    camToCam = data._load_calib_cam_to_cam('.\\2011_09_26\\calib_velo_to_cam.txt','.\\2011_09_26\\calib_cam_to_cam.txt')
     return camToCam
 def calculate_depth(disparity_map):
     [x,y,_] = np.shape(disparity_map)
     b = 0.54
-    f =
+    f = 5
     depth = np.zeros((x,y),0)
     for i in range(0,x):
         for j in range(0,y):
