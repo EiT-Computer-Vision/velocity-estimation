@@ -1,5 +1,5 @@
 # Data folder
-/velocity-estimation/data
+data
 
 # Editor config
 .editorconfig

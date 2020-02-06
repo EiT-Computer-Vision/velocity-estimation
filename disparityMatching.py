@@ -1,16 +1,18 @@
 import numpy as np
 import cv2
-from matplotlib import pyplot as plt
-imgL = cv2.imread('.\\2011_09_26\\2011_09_26_drive_0096_sync\\image_02\\data\\0000000051.png',0)
-imgR = cv2.imread('.\\2011_09_26\\2011_09_26_drive_0096_sync\\image_03\\data\\0000000051.png',0)
+imgL = cv2.imread('./data/2011_09_26/2011_09_26_drive_0096_sync/image_02/data/0000000051.png',0)
+imgR = cv2.imread('./data/2011_09_26/2011_09_26_drive_0096_sync/image_03/data/0000000051.png',0)
 from imageManipulation import loadData
 
 #baseline = 54 cm?
 #focal length = ?
 
+
 def loadCamToCam(data):
-    camToCam = data._load_calib_cam_to_cam('.\\2011_09_26\\calib_velo_to_cam.txt','.\\2011_09_26\\calib_cam_to_cam.txt')
+    camToCam = data._load_calib_cam_to_cam('./data/2011_09_26/calib_velo_to_cam.txt','./data/2011_09_26/calib_cam_to_cam.txt')
     return camToCam
+
+
 def calculate_depth(disparity_map):
     [x,y,_] = np.shape(disparity_map)
     b = 0.54
@@ -20,6 +22,7 @@ def calculate_depth(disparity_map):
         for j in range(0,y):
             if disparity_map[i,j] > 0:
                 depth[i,j] = b*f/disparity_map[i,j]
+
 
 def calculate_disparity_map(img_left, img_right):
     stereo = cv2.StereoBM_create(numDisparities=48, blockSize=15)

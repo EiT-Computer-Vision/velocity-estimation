@@ -6,7 +6,7 @@ import numpy as np
 import pykitti as pk
 
 def loadData():
-    basedir = '.'
+    basedir = './data'
     date = '2011_09_26'
     drive = '0096'
 

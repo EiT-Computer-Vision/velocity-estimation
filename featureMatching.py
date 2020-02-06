@@ -2,8 +2,8 @@ import numpy as np
 import cv2 as cv
 import matplotlib.pyplot as plt
 
-img1 = cv.imread('.\\2011_09_26\\2011_09_26_drive_0096_sync\\image_02\\data\\0000000000.png',0)
-img2 = cv.imread('.\\2011_09_26\\2011_09_26_drive_0096_sync\\image_02\\data\\0000000001.png',0)
+img1 = cv.imread('./data/2011_09_26/2011_09_26_drive_0096_sync/image_02/data/0000000000.png',0)
+img2 = cv.imread('./data/2011_09_26/2011_09_26_drive_0096_sync/image_02/data/0000000001.png',0)
 # Initiate ORB detector
 orb = cv.ORB_create()
 # find the keypoints and descriptors with ORB
