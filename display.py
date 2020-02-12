@@ -4,6 +4,7 @@ Module intended to display the data. TBF.
 
 import frame_functions
 import numpy as np
+import cv2
 
 def get_velocity_dummy(img1, img2):
     """
@@ -19,8 +20,16 @@ def get_velocity_dummy(img1, img2):
     return np.mean(velocity)
 
 def display_velocity(img1, img2):
-    velocity= get_velocity_dummy(img1, img2)
-    print("Current velocity estimate: " + str(velocity))
+    frames = [img1, img2]
+    velocity = get_velocity_dummy(img1, img2)
+
+    for frame in frames:
+        cv2.imshow('frame', frame)
+        cv2.putText(img2, str(velocity), (0, 100), cv2.FONT_HERSHEY_SIMPLEX, .5, (255,255,255),2,cv2.LINE_AA)
+        cv2.waitKey(10)
+
+    #print("Current velocity estimate: " + str(velocity))
+    return
 
 
 

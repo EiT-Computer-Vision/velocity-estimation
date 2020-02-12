@@ -2,7 +2,6 @@
 Main module containing the program loop. Serves as an entry point to the program.
 """
 
-import frame_functions
 import display
 import glob
 import cv2
