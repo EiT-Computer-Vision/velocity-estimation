@@ -2,7 +2,8 @@
 Main module containing the program loop. Serves as an entry point to the program.
 """
 
-import displacement
+import frame_functions
+import display
 import glob
 import cv2
 
@@ -21,7 +22,6 @@ def get_video_sequence(path):
     """
     return [frame_path for frame_path in glob.glob(path + "\\*.png")]
 
-def get_next_frames(video_sequence):
 
 def run():
     video_sequence = get_video_sequence(VIDEO_PATH)
@@ -31,5 +31,7 @@ def run():
         if index + 1 != num_frames: # we are not at last frame
             img1 = cv2.imread(frame, cv2.IMREAD_GRAYSCALE) # reads the frame as grayscale
             img2 = cv2.imread(video_sequence[index + 1], cv2.IMREAD_GRAYSCALE) # retrieve the next frame in the sequence
+            display.display_velocity(img1, img2)
+    print("Processed " + str(index + 1) + " frames")
 
 run()

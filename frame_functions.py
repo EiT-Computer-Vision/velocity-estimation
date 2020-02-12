@@ -33,5 +33,3 @@ def run_test():
 
     print(init_pixel_pos)
     print(new_pixel_pos)
-
-run_test()

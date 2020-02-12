@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="30eff4fe-51bc-4c56-bd6a-34fe993d2865" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/displacement.py" beforeDir="false" afterPath="$PROJECT_DIR$/frame_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/display.py" beforeDir="false" afterPath="$PROJECT_DIR$/display.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocity_estimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/velocity_estimation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/velocity_estimation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="81" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
+            <state relative-caret-position="486">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -36,11 +39,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/display.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+            <state relative-caret-position="367">
+              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+              <folding>
+                <element signature="e#51#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frame_functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,8 +102,9 @@
         <option value="$PROJECT_DIR$/../openCV_test.py" />
         <option value="$PROJECT_DIR$/displacement.py" />
         <option value="$PROJECT_DIR$/Video data/velocity_estimation.py" />
-        <option value="$PROJECT_DIR$/display.py" />
+        <option value="$PROJECT_DIR$/frame_functions.py" />
         <option value="$PROJECT_DIR$/velocity_estimation.py" />
+        <option value="$PROJECT_DIR$/display.py" />
       </list>
     </option>
   </component>
@@ -100,10 +119,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="60" />
-    <option name="y" value="23" />
-    <option name="width" value="1393" />
-    <option name="height" value="877" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -120,6 +138,24 @@
             <path>
               <item name="velocity-estimation" type="b2602c69:ProjectViewProjectNode" />
               <item name="velocity-estimation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="velocity-estimation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="velocity-estimation" type="462c0819:PsiDirectoryNode" />
+              <item name="Video data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="velocity-estimation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="velocity-estimation" type="462c0819:PsiDirectoryNode" />
+              <item name="Video data" type="462c0819:PsiDirectoryNode" />
+              <item name="2011_09_26" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="velocity-estimation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="velocity-estimation" type="462c0819:PsiDirectoryNode" />
+              <item name="Video data" type="462c0819:PsiDirectoryNode" />
+              <item name="2011_09_26" type="462c0819:PsiDirectoryNode" />
+              <item name="2011_09_26_drive_0001_sync" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,7 +256,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/displacement.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\waage\Programming\PyCharm Projects\EiT - Computer Vision\velocity-estimation\frame_functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -229,7 +265,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="opticalFlow" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="display" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="velocity-estimation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -242,7 +278,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opticalFlow.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/display.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -276,10 +312,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.velocity_estimation" />
+        <item itemvalue="Python.display" />
         <item itemvalue="Python.displacement" />
         <item itemvalue="Python.convertPNGtoAVI" />
         <item itemvalue="Python.disparityMatching (1)" />
-        <item itemvalue="Python.opticalFlow" />
       </list>
     </recent_temporary>
   </component>
@@ -296,23 +332,23 @@
       <workItem from="1580289638966" duration="2919000" />
       <workItem from="1580293261862" duration="19000" />
       <workItem from="1580293322611" duration="1532000" />
-      <workItem from="1581495240332" duration="5313000" />
+      <workItem from="1581495240332" duration="8047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23870000" />
+    <option name="totallyTimeSpent" value="26604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1988273" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15298508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -361,8 +397,9 @@
     <SUITE FILE_PATH="coverage/velocity_estimation$imageManipulation.coverage" NAME="imageManipulation Coverage Results" MODIFIED="1580910540263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/velocity_estimation$setup.coverage" NAME="setup Coverage Results" MODIFIED="1580907563807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/velocity_estimation$opticalFlow.coverage" NAME="opticalFlow Coverage Results" MODIFIED="1580910544691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/velocity_estimation$display.coverage" NAME="display Coverage Results" MODIFIED="1581511196780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/velocity_estimation$featureMatching.coverage" NAME="featureMatching Coverage Results" MODIFIED="1580910523280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/velocity_estimation$velocity_estimation.coverage" NAME="velocity_estimation Coverage Results" MODIFIED="1581501396202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/velocity_estimation$velocity_estimation.coverage" NAME="velocity_estimation Coverage Results" MODIFIED="1581511953577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/velocity_estimation$disparityMatching.coverage" NAME="disparityMatching Coverage Results" MODIFIED="1580897713625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/velocity-estimation" />
     <SUITE FILE_PATH="coverage/velocity_estimation$convertPNGtoAVI.coverage" NAME="convertPNGtoAVI Coverage Results" MODIFIED="1580911785861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/velocity_estimation$displacement.coverage" NAME="displacement Coverage Results" MODIFIED="1581499001003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -438,16 +475,6 @@
     <entry file="file://$PROJECT_DIR$/Video data/velocity_estimation.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/displacement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../openCV_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -458,19 +485,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/display.py">
+    <entry file="file://$PROJECT_DIR$/velocity_estimation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+        <state relative-caret-position="486">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/velocity_estimation.py">
+    <entry file="file://$PROJECT_DIR$/frame_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="81" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
+        <state relative-caret-position="595">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+          <folding>
+            <element signature="e#51#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
