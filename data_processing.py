@@ -10,23 +10,46 @@ from frame_functions import getPixelDisplacement
 
 def get_velocity(img1, img2):
     # Get disparity maps:
-    disparity_map_1 = calculate_disparity_map(img1[0], img1[1])
-    disparity_map_2 = calculate_disparity_map(img2[0], img2[1])
+    # TODO: Get actual two stereo images!
+
+    disparity_map_1 = calculate_disparity_map(img1, img1)
+    disparity_map_2 = calculate_disparity_map(img2, img2)
     # Get depth maps:
     depth_map_1 = calculate_depth(disparity_map_1)
     depth_map_2 = calculate_depth(disparity_map_2)
 
     # Find points to track:
+    # Will be Nx2 numpy arrays, with pixel coordinates (u,v) per point
     old_pixels, new_pixels = getPixelDisplacement(img1, img2)
 
-    # TODO: Find depth on these points in consecutive frames and get the velocity
+    # Create arrays for row and column indices, so that we can index all points at the same time:
+    old_pixels_row_indices = old_pixels[:, 1]
+    old_pixels_column_indices = old_pixels[:, 0]
+    new_pixels_row_indices = new_pixels[:, 1]
+    new_pixels_column_indices = new_pixels[:, 0]
 
+    # Get the depths on these points:
+    depth_points_1 = depth_map_1[old_pixels_row_indices.astype(int), old_pixels_column_indices.astype(int)]
+    depth_points_2 = depth_map_2[new_pixels_row_indices.astype(int), new_pixels_column_indices.astype(int)]
 
+    # Get time stamps:
+    # TODO: Get actual time stamps
+    time_1 = 0
+    time_2 = 0.1
+
+    # Add a "-" sign, so that the velocities represent the movement of the car relative to points in forward direction
+    # (not points relative to car).
+    velocities = -(depth_points_2-depth_points_1)/(time_2-time_1)
+
+    # Return the mean of those velocities (for now):
+    return np.mean(velocities)
 
 
 def calculate_depth(disparity_map):
     # Get global projection matrix:
-    projection_matrix = np.ndarray((3, 4), np.zeros((3, 4)))
+    # TODO: Get the actual matrix
+    # Dummy-matrix:
+    projection_matrix = np.ones((3, 4))
 
     # Get focal length and baseline from the projection matrix:
     focal_length_u = projection_matrix[0][0]
@@ -34,7 +57,8 @@ def calculate_depth(disparity_map):
 
     # Fin depth by dividing baseline times focal length on the disparity
     # for each element in disparity_map which is nonzero:
-    depth_map = np.divide(baseline_x * focal_length_u, disparity_map, where= disparity_map != 0)
+    depth_map = np.zeros(np.shape(disparity_map))
+    np.divide(baseline_x * focal_length_u, disparity_map, out=depth_map, where=disparity_map != 0)
 
     return depth_map
 
