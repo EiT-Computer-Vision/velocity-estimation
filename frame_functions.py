@@ -13,12 +13,12 @@ LK_PARAMS = dict( winSize  = (15,15),
                   maxLevel = 2,
                   criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 1, 0.03))
 
-def getPixelDisplacement(img1, img2):
+def getPixelDisplacement(frame1, frame2):
     # Select features to track
-    p0 = cv2.goodFeaturesToTrack(img1, **FEATURE_PARAMS)
+    p0 = cv2.goodFeaturesToTrack(frame1.left_img, **FEATURE_PARAMS)
 
     # Calculate optical flow
-    p1, st, err = cv2.calcOpticalFlowPyrLK(img1, img2, p0, None, **LK_PARAMS)
+    p1, st, err = cv2.calcOpticalFlowPyrLK(frame1.left_img, frame2.left_img, p0, None, **LK_PARAMS)
 
     return np.squeeze(p0), np.squeeze(p1)
 

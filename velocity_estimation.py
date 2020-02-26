@@ -1,12 +1,20 @@
 """
 Main module containing the program loop. Serves as an entry point to the program.
 """
-
 import display
 import glob
 import cv2
+from classes import Frame
 
-VIDEO_PATH = "Video data/2011_09_26/2011_09_26_drive_0001_sync/image_00/data"
+VIDEO_DIRECTORY_LEFT = "Video data/2011_09_26/2011_09_26_drive_0001_sync/image_00/data"
+VIDEO_DIRECTORY_RIGHT = "Video data/2011_09_26/2011_09_26_drive_0001_sync/image_01/data"
+
+# Hardcoded focal length, baseline, time:
+# Focal length and time from calib_cam_to_cam.txt:
+FOCAL_LENGTH = 7.215377e+02
+BASELINE = 3.875744e+02/7.215377e+02
+# Circa. Concrete can be gotten from timestamps.txt:
+TIME_DELTA = 0.100
 
 
 def get_video_sequence(path):
@@ -22,18 +30,16 @@ def get_video_sequence(path):
     return [frame_path for frame_path in sorted(glob.glob(path + "/*.png"))]
 
 
-def run(path):
-    video_sequence = get_video_sequence(path)
-    print(video_sequence)
-    num_frames = len(video_sequence)
+def run(directory_left, directory_right):
+    # Initiate frames
+    frames = Frame.get_array(directory_left, directory_right)
 
-    for index, frame in enumerate(video_sequence):
-        if index + 1 != num_frames: # we are not at last frame
-            img1 = cv2.imread(frame, cv2.IMREAD_GRAYSCALE) # reads the frame as grayscale
-            img2 = cv2.imread(video_sequence[index + 1], cv2.IMREAD_GRAYSCALE) # retrieve the next frame in the sequence
-            display.display_velocity(img1, img2)
-            #print("Processed " + str(index + 1) + " frames")
+    # Loop over frames
+    for i in range(len(frames)):
+        if not frames[i+1].is_last_frame:
+            display.display_velocity(frames[i], frames[i+1])
 
 
 if __name__ == '__main__':
-    run(VIDEO_PATH)
+    run(VIDEO_DIRECTORY_LEFT, VIDEO_DIRECTORY_RIGHT)
+
