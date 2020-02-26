@@ -6,7 +6,7 @@ import display
 import glob
 import cv2
 
-VIDEO_PATH = "Video data\\2011_09_26\\2011_09_26_drive_0001_sync\\image_00\\data"
+VIDEO_PATH = "Video data/2011_09_26/2011_09_26_drive_0001_sync/image_00/data"
 
 
 def get_video_sequence(path):
@@ -19,11 +19,12 @@ def get_video_sequence(path):
     Return:
         video_sequence - List containing the paths of all frames in the sequence as String
     """
-    return [frame_path for frame_path in glob.glob(path + "\\*.png")]
+    return [frame_path for frame_path in sorted(glob.glob(path + "/*.png"))]
 
 
-def run():
-    video_sequence = get_video_sequence(VIDEO_PATH)
+def run(path):
+    video_sequence = get_video_sequence(path)
+    print(video_sequence)
     num_frames = len(video_sequence)
 
     for index, frame in enumerate(video_sequence):
@@ -31,6 +32,8 @@ def run():
             img1 = cv2.imread(frame, cv2.IMREAD_GRAYSCALE) # reads the frame as grayscale
             img2 = cv2.imread(video_sequence[index + 1], cv2.IMREAD_GRAYSCALE) # retrieve the next frame in the sequence
             display.display_velocity(img1, img2)
-    print("Processed " + str(index + 1) + " frames")
+            #print("Processed " + str(index + 1) + " frames")
 
-run()
+
+if __name__ == '__main__':
+    run(VIDEO_PATH)
