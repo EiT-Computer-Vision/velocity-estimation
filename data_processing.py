@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+from math import sqrt
 from frame_functions import getPixelDisplacement
 
 # Method for receiving projective matrix - Jens will fix global
@@ -7,6 +8,13 @@ from frame_functions import getPixelDisplacement
 # Method for getting the depth - yeppsipepsi
 # Method for finding the velocity based on depth and points from consecutive frames
 
+def get_error(estimated_velocity, true_velocity):
+    # estimated_velocity : float, velocity estimated from clip
+    # true_velocity : float, true velocity extracted from metadata
+    print(true_velocity)
+    print(estimated_velocity)
+    error = sqrt((estimated_velocity - true_velocity)**2)
+    return error # returns the value
 
 def get_velocity(img1, img2):
     # Get disparity maps:
@@ -70,3 +78,6 @@ def calculate_disparity_map(img_left, img_right):
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11, 11))
     disparity_map = cv2.morphologyEx(disparity_map, cv2.MORPH_CLOSE, kernel)
     return disparity_map
+
+
+
