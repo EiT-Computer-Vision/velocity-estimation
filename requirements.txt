@@ -1,6 +1,6 @@
 numpy
 # For mac users the newest version crashes when trying cv2.imshow, so use version 4.1.2.30:
-opencv-contrib-python==4.1.2.30
+opencv-contrib-python==4.2.0.32
 glob3
 pykitti
 matplotlib
